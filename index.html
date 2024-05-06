@@ -57,6 +57,104 @@
         console.log("El tipo de dato de persona2 es "+typeof(persona2));
         console.log("El tipo de dato del nombre de perona2 es "+typeof(persona2.nombre));
         console.log("El tipo de dato de x  es "+typeof(x));
+
+        const LEGAL_AGE = 18;
+        let edad = 18;
+        if(edad>=LEGAL_AGE){
+            console.log("Eres mayor de edad");
+        }else{
+            console.log("No eres mayor de edad");
+        }
+
+        let numero = 15;
+        if(numero>0){
+            console.log("Es mayor que cero");
+        }else if(numero<0){
+            console.log("Es menor que cero");
+        }else{
+            console.log("El numero es cero")
+        }
+        var dia = "Miercoles";
+        switch(dia){
+            case "Lunes":
+                console.log("Hoy es lunes");
+                break;
+            case "Martes":
+                console.log("Hoy es Martes");
+                break;
+            case "Miercoles":
+                console.log("Hoy es Miercoles");
+                break;
+            //....
+            
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        let un_Num = 5
+        while (un_Num<10) {
+            console.log("5 es mayor que 4");
+            un_Num=un_Num+1;
+        } 
+        do{
+            console.log("Pase almenos una vez")
+            break;
+        }while(5>4);
+        for(let i = 1; i <=10; i++){
+            console.log(i);
+            if (i===5){
+                console.log("LLegamos al 5")
+                break;
+            }
+        }
+        for(let i = 1; i <=15; i++){
+            if (i%2===0){
+                
+                continue;
+            }
+            console.log(i)
+        }
+        let hoursWorked = 50;
+        let priceHour = 4000;
+        let totalPayd = hoursWorked*priceHour;
+        if (hoursWorked>40){
+            totalPayd=totalPayd+ (((hoursWorked-40)*1.5)*4000);
+        }
+        console.log(totalPayd);
+        let numMes = prompt("Introduzca un numero");
+        if(numMes<=12 && numMes>=1){
+            switch(numMes){
+                case 1:
+                    console.log("Enero");
+                case 2:
+                    console.log("Febrero");
+                case 3:
+                    console.log("Marzo");
+                case 4:
+                    console.log("Abril");
+                case 5:
+                    console.log("Mayo");
+                case 6:
+                    console.log("Junio");
+                case 7:
+                    console.log("Julio");
+                case 8:
+                    console.log("Agosto");
+                case 9:
+                    console.log("Septiembre");
+                case 10:
+                    console.log("Octubre");
+                case 11:
+                    console.log("Noviembre");
+                case 12:
+                    console.log("Diciembre");
+            }
+        }else{
+            console.log("El numero no esta en rango")
+        }
+        //Verificar por que no sirve
+        
     </script>
 </body>
 </html>
