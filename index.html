@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #miElemento {
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        }
+    </style>
 </head>
+
 <body>
+    <div id="miElemento">Pasa el ratón aquí</div>
+    <button id="miBoton">Haz clic aqui</button>
     <script>
         console.log('Hola Mundo')
-        function miFuntion(){
-            var variableLocal="Soy una variable local";
+        function miFuntion() {
+            var variableLocal = "Soy una variable local";
             console.log(variableLocal);
         }
         miFuntion();//Imprime la variable
         //console.log(variableLocal)//Genera error ya que esta variable se encontro declarada localmente en una funcion
         var globalVar = 10;
-        function myFunction(){
+        function myFunction() {
             var localVar = 20;
             console.log(globalVar);
             console.log(localVar);
@@ -25,57 +36,57 @@
         //console.log(localVar);Genera error ya que esta variable se encontro declarada localmente en una funcion
         let num1 = 5;
         let num2 = 10;
-        let suma = num1+num2;
+        let suma = num1 + num2;
         console.log(suma);
-        suma+=1;
+        suma += 1;
         console.log(suma);
-        let multiplication = num1*num2;
+        let multiplication = num1 * num2;
         console.log(multiplication);
-        let resultado = (num1>num2);
+        let resultado = (num1 > num2);
         console.log(resultado);
-        let ternaryResult = (num1>num2)?"Mayor":"Menor o igual";
+        let ternaryResult = (num1 > num2) ? "Mayor" : "Menor o igual";
         console.log(ternaryResult);
         let persona = {
-            nombre:"Juan",
-            edad:25
+            nombre: "Juan",
+            edad: 25
         }//tipo de dato no primitivo u objeto
-        console.log("El nombre la persona 1 es "+persona.nombre+" y su edad es "+persona.edad);
-        console.log(typeof(ternaryResult));//Arroja string
-        console.log(typeof(persona));//Arroja object
-        let resultado2 = 2**3;
+        console.log("El nombre la persona 1 es " + persona.nombre + " y su edad es " + persona.edad);
+        console.log(typeof (ternaryResult));//Arroja string
+        console.log(typeof (persona));//Arroja object
+        let resultado2 = 2 ** 3;
         console.log(resultado2);
-        let resultado3 = (1+2,5*3);//Arroja el ultimo procedimiento despues de la coma en este caso 5*3=15
+        let resultado3 = (1 + 2, 5 * 3);//Arroja el ultimo procedimiento despues de la coma en este caso 5*3=15
         console.log(resultado3);
-        let persona2={
-            nombre:"Alejandro",
-            age:18,
-            city:"Ocaña"
+        let persona2 = {
+            nombre: "Alejandro",
+            age: 18,
+            city: "Ocaña"
         }//tipo de dato no primitivo u objeto
         console.log(persona2.nombre);
-        let property=persona2.age;
+        let property = persona2.age;
         console.log(property);
-        console.log("El tipo de dato de persona2 es "+typeof(persona2));
-        console.log("El tipo de dato del nombre de perona2 es "+typeof(persona2.nombre));
-        console.log("El tipo de dato de x  es "+typeof(x));
+        console.log("El tipo de dato de persona2 es " + typeof (persona2));
+        console.log("El tipo de dato del nombre de perona2 es " + typeof (persona2.nombre));
+        console.log("El tipo de dato de x  es " + typeof (x));
 
         const LEGAL_AGE = 18;
         let edad = 18;
-        if(edad>=LEGAL_AGE){
+        if (edad >= LEGAL_AGE) {
             console.log("Eres mayor de edad");
-        }else{
+        } else {
             console.log("No eres mayor de edad");
         }
 
         let numero = 15;
-        if(numero>0){
+        if (numero > 0) {
             console.log("Es mayor que cero");
-        }else if(numero<0){
+        } else if (numero < 0) {
             console.log("Es menor que cero");
-        }else{
+        } else {
             console.log("El numero es cero")
         }
         var dia = "Miercoles";
-        switch(dia){
+        switch (dia) {
             case "Lunes":
                 console.log("Hoy es lunes");
                 break;
@@ -86,45 +97,45 @@
                 console.log("Hoy es Miercoles");
                 break;
             //....
-            
+
         }
 
         for (let i = 1; i <= 5; i++) {
             console.log(i);
         }
         let un_Num = 5
-        while (un_Num<10) {
+        while (un_Num < 10) {
             console.log("5 es mayor que 4");
-            un_Num=un_Num+1;
-        } 
-        do{
+            un_Num = un_Num + 1;
+        }
+        do {
             console.log("Pase almenos una vez")
             break;
-        }while(5>4);
-        for(let i = 1; i <=10; i++){
+        } while (5 > 4);
+        for (let i = 1; i <= 10; i++) {
             console.log(i);
-            if (i===5){
+            if (i === 5) {
                 console.log("LLegamos al 5")
                 break;
             }
         }
-        for(let i = 1; i <=15; i++){
-            if (i%2===0){
-                
+        for (let i = 1; i <= 15; i++) {
+            if (i % 2 === 0) {
+
                 continue;
             }
             console.log(i)
         }
         let hoursWorked = 50;
         let priceHour = 4000;
-        let totalPayd = hoursWorked*priceHour;
-        if (hoursWorked>40){
-            totalPayd=totalPayd+ (((hoursWorked-40)*1.5)*4000);
+        let totalPayd = hoursWorked * priceHour;
+        if (hoursWorked > 40) {
+            totalPayd = totalPayd + (((hoursWorked - 40) * 1.5) * 4000);
         }
         console.log(totalPayd);
         let numMes = prompt("Introduzca un numero");
-        if(numMes<=12 && numMes>=1){
-            switch(numMes){
+        if (numMes <= 12 && numMes >= 1) {
+            switch (numMes) {
                 case 1:
                     console.log("Enero");
                 case 2:
@@ -150,11 +161,37 @@
                 case 12:
                     console.log("Diciembre");
             }
-        }else{
+        } else {
             console.log("El numero no esta en rango")
         }
         //Verificar por que no sirve
-        
+        let result = sumar(2, 4);
+        function sumar(a, b) {
+            return a + b;
+        }
+
+        console.log(result);
+
+        let frutas = ['Manzana', "Pera"];
+        console.log(frutas);
+        console.log(frutas.pop());
+        console.log(frutas);
+        frutas.push("Ciruela");
+        console.log(frutas);
+
+        let boton = document.getElementById("miBoton");
+        boton.addEventListener("click",function(){
+            alert("Hiciste clic en el boton")
+        })
+        let elemento = document.getElementById("miElemento");
+        elemento.addEventListener("mouseover", function() {
+        this.style.backgroundColor = "lightgreen";
+        });
+        elemento.addEventListener("mouseout", function() {
+        this.style.backgroundColor = "lightblue";
+        });
+
     </script>
 </body>
+
 </html>
